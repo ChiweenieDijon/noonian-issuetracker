@@ -1,0 +1,547 @@
+{
+"metadata":{
+	"_id": "AppjIgVxEei8YQAaTWcOdQ",
+	"build_config": {
+		"exclude": [
+			"Product",
+			"ProductComponent",
+			"ProductIssue"
+		]
+	},
+	"description": "Basic issue tracker that can inserted into any noonian app",
+	"enable_building": false,
+	"key": "app.issuetracker",
+	"major_version": 0,
+	"manifest": {
+		"BusinessObjectDef": {
+			"5O6-uluaSz-SQuKeBBV5lg": "issuetracker:1",
+			"OWkdF2trRIi73py6LWgQWw": "issuetracker:6",
+			"gGG_8nlGT1OLI-AKf4_8zg": "issuetracker:1"
+		},
+		"Config": {
+			"FQFrPv__Q9KxVnIEyQ2l6A": "issuetracker:2",
+			"vHcLhoe3RkWuhvAPnnHeSQ": "issuetracker:3",
+			"zJDJnRMjQRC0CgGpSystag": "issuetracker:2"
+		},
+		"Enumeration": {
+			"8ex9ReY1RCqpU-oOv1Pirg": "issuetracker:1",
+			"DnE2k0VxR6i7i9I785OTcA": "issuetracker:1",
+			"LHorSp7jQbK5dcAzBJ9Icw": "issuetracker:2",
+			"bAKyGYSNR_uHnPVsh0CvhA": "issuetracker:3"
+		},
+		"LabelGroup": {
+			"DDpEo0AZRfOHdLho1hClHA": "issuetracker:1",
+			"MNjhR5l9RlWHTUvmDJEqbg": "issuetracker:1",
+			"S5FNfJONRiCxXELMrwARvw": "issuetracker:1",
+			"Tvvwmb3rQE2trJ6y9GYbmA": "issuetracker:1",
+			"UOLOwXQHTQqxVyfRjNOrYQ": "issuetracker:3",
+			"pSKcyiBIRR6XD4bVWIYdVA": "issuetracker:1",
+			"z1CyOdDqRKOwKY6SaVxAcA": "issuetracker:4"
+		}
+	},
+	"minor_version": 1,
+	"name": "Issue Tracker"
+},
+"business_objects":[
+{
+	"__disp": "ProductComponent",
+	"__ver": "issuetracker:1",
+	"_class": "BusinessObjectDef",
+	"_id": "5O6-uluaSz-SQuKeBBV5lg",
+	"abstract": false,
+	"class_name": "ProductComponent",
+	"definition": {
+		"description": {
+			"type": "text"
+		},
+		"name": {
+			"type": "string"
+		},
+		"product": {
+			"ref_class": "Product",
+			"type": "reference"
+		},
+		"status": {
+			"enum": [
+				"active",
+				"inactive"
+			],
+			"type": "string"
+		}
+	},
+	"doc": "\n @property {text} description \n @property {string} name \n @property {reference.<Product>} product \n @property {string} status \n",
+	"system": false
+},
+{
+	"__disp": "ProductIssue",
+	"__ver": "issuetracker:6",
+	"_class": "BusinessObjectDef",
+	"_id": "OWkdF2trRIi73py6LWgQWw",
+	"abstract": false,
+	"class_name": "ProductIssue",
+	"definition": {
+		"_disp": "<%= summary %>",
+		"blocks": [
+			{
+				"ref_class": "ProductIssue",
+				"type": "reference"
+			}
+		],
+		"component": {
+			"ref_class": "ProductComponent",
+			"type": "reference"
+		},
+		"created_date": {
+			"type": "date"
+		},
+		"depends_on": [
+			{
+				"ref_class": "ProductIssue",
+				"type": "reference"
+			}
+		],
+		"description": {
+			"type": "text"
+		},
+		"estimated_hours": {
+			"type": "integer"
+		},
+		"modified_date": {
+			"type": "date"
+		},
+		"priority": {
+			"enum": "IssuePriority",
+			"type": "enum"
+		},
+		"requester": {
+			"ref_class": "User",
+			"type": "reference"
+		},
+		"resolution_text": {
+			"type": "text"
+		},
+		"severity": {
+			"enum": "IssueSeverity",
+			"type": "enum"
+		},
+		"status": {
+			"enum": "IssueStatus",
+			"type": "enum"
+		},
+		"summary": {
+			"type": "string"
+		},
+		"tags": {
+			"enum": "IssueTag",
+			"type": "taglist"
+		},
+		"target_milestone": {
+			"type": "string"
+		}
+	},
+	"doc": "\n @property {reference.<ProductIssue>[]} blocks \n @property {reference.<Component>} component \n @property {date} created_date \n @property {enum} criticality \n @property {reference.<ProductIssue>[]} depends_on \n @property {text} description \n @property {integer} estimated_hours \n @property {date} modified_date \n @property {enum} priority \n @property {string} requester \n @property {text} resolution_text \n @property {string} status \n @property {string} summary \n @property {string} target_milestone \n\n @property {enum} severity \n\n @property {taglist} tags \n",
+	"system": false
+},
+{
+	"__disp": "Product",
+	"__ver": "issuetracker:1",
+	"_class": "BusinessObjectDef",
+	"_id": "gGG_8nlGT1OLI-AKf4_8zg",
+	"abstract": false,
+	"class_name": "Product",
+	"definition": {
+		"description": {
+			"type": "text"
+		},
+		"milestones": [
+			{
+				"type": "string"
+			}
+		],
+		"name": {
+			"type": "string"
+		},
+		"versions": [
+			{
+				"type": "string"
+			}
+		]
+	},
+	"doc": "\n @property {text} description \n @property {string[]} milestones \n @property {string} name \n @property {string[]} versions \n",
+	"system": false
+},
+{
+	"__ver": "issuetracker:2",
+	"_class": "Config",
+	"_id": "FQFrPv__Q9KxVnIEyQ2l6A",
+	"allow_customize": false,
+	"key": "sys.dbui.perspective.default.Product",
+	"rolespec": [
+	],
+	"system": false,
+	"value": {
+		"edit": {
+			"layout": [
+				"name",
+				"description",
+				"versions",
+				"milestones"
+			]
+		},
+		"list": {
+			"fields": [
+				"name",
+				"versions",
+				"milestones"
+			]
+		},
+		"picker_list": {
+			"fields": [
+				"name",
+				"versions",
+				"milestones"
+			]
+		},
+		"view": {
+			"layout": [
+				"name",
+				"description",
+				"versions",
+				"milestones"
+			],
+			"related": [
+				{
+					"class": "Component",
+					"field": "product"
+				},
+				{
+					"class": "ProductIssue",
+					"field": "product"
+				}
+			]
+		}
+	}
+},
+{
+	"__ver": "issuetracker:3",
+	"_class": "Config",
+	"_id": "vHcLhoe3RkWuhvAPnnHeSQ",
+	"allow_customize": false,
+	"key": "sys.dbui.perspective.default.ProductIssue",
+	"rolespec": [
+	],
+	"system": false,
+	"value": {
+		"edit": {
+			"layout": [
+				"status",
+				"product",
+				"component",
+				[
+					"priority",
+					"severity"
+				],
+				"summary",
+				"description",
+				[
+					"estimated_hours",
+					"actual_hours"
+				],
+				"requester",
+				"resolution_text",
+				"target_milestone",
+				[
+					"depends_on",
+					"blocks"
+				],
+				"task"
+			]
+		},
+		"list": {
+			"fields": [
+				"product",
+				"component",
+				"summary",
+				"status",
+				"priority",
+				"created_date"
+			]
+		},
+		"picker_list": {
+			"fields": [
+				"product",
+				"component",
+				"summary",
+				"status",
+				"priority",
+				"created_date"
+			]
+		},
+		"view": {
+			"layout": [
+				[
+					"created_date",
+					"modified_date"
+				],
+				"status",
+				"product",
+				"component",
+				[
+					"priority",
+					"criticality"
+				],
+				"summary",
+				"description",
+				[
+					"estimated_hours",
+					"actual_hours"
+				],
+				"requester",
+				"resolution_text",
+				"target_milestone",
+				[
+					"depends_on",
+					"blocks"
+				],
+				"task"
+			]
+		}
+	}
+},
+{
+	"__ver": "issuetracker:2",
+	"_class": "Config",
+	"_id": "zJDJnRMjQRC0CgGpSystag",
+	"allow_customize": false,
+	"key": "sys.dbui.perspective.default.ProductComponent",
+	"rolespec": [
+	],
+	"system": false,
+	"value": {
+		"edit": {
+			"layout": [
+				"product",
+				"name",
+				"status",
+				"description"
+			]
+		},
+		"list": {
+			"fields": [
+				"product",
+				"name",
+				"status",
+				"description"
+			]
+		},
+		"picker_list": {
+			"fields": [
+				"name"
+			]
+		},
+		"view": {
+			"layout": [
+				"product",
+				"name",
+				"status",
+				"description"
+			],
+			"related": [
+				{
+					"class": "ProductIssue",
+					"field": "component"
+				}
+			]
+		}
+	}
+},
+{
+	"__ver": "issuetracker:1",
+	"_class": "Enumeration",
+	"_id": "8ex9ReY1RCqpU-oOv1Pirg",
+	"name": "IssueStatus",
+	"values": [
+		"new",
+		"confirmed",
+		"blocked",
+		"in_work",
+		"resolved",
+		"cancelled"
+	]
+},
+{
+	"__ver": "issuetracker:1",
+	"_class": "Enumeration",
+	"_id": "DnE2k0VxR6i7i9I785OTcA",
+	"name": "IssueTag",
+	"values": [
+		"Bug",
+		"Enhancement",
+		"New Feature"
+	]
+},
+{
+	"__ver": "issuetracker:2",
+	"_class": "Enumeration",
+	"_id": "LHorSp7jQbK5dcAzBJ9Icw",
+	"name": "IssueSeverity",
+	"values": [
+		"1_urgent",
+		"2_high",
+		"3_medium",
+		"4_low",
+		"5_unknown"
+	]
+},
+{
+	"__ver": "issuetracker:3",
+	"_class": "Enumeration",
+	"_id": "bAKyGYSNR_uHnPVsh0CvhA",
+	"name": "IssuePriority",
+	"values": [
+		"1_max",
+		"2_high",
+		"3_medium",
+		"4_low",
+		"5_min"
+	]
+},
+{
+	"__ver": "issuetracker:1",
+	"_class": "LabelGroup",
+	"_id": "DDpEo0AZRfOHdLho1hClHA",
+	"key": "db.enum.IssueTag",
+	"language": {
+		"_disp": "English",
+		"_id": "-9vPfv2lEeSFtiimx_V4dw",
+		"code": "en"
+	},
+	"system": false,
+	"value": {
+		"Bug": "Bug",
+		"Enhancement": "Enhancement",
+		"New Feature": "New Feature"
+	}
+},
+{
+	"__ver": "issuetracker:1",
+	"_class": "LabelGroup",
+	"_id": "MNjhR5l9RlWHTUvmDJEqbg",
+	"key": "sys.dbui.bo.Product",
+	"language": {
+		"_disp": "English",
+		"_id": "-9vPfv2lEeSFtiimx_V4dw",
+		"code": "en"
+	},
+	"system": false,
+	"value": {
+		"description": "Description",
+		"milestones": "Milestones",
+		"name": "Name",
+		"versions": "Versions"
+	}
+},
+{
+	"__ver": "issuetracker:1",
+	"_class": "LabelGroup",
+	"_id": "S5FNfJONRiCxXELMrwARvw",
+	"key": "sys.dbui.bo.ProductIssue",
+	"language": {
+		"_disp": "English",
+		"_id": "-9vPfv2lEeSFtiimx_V4dw",
+		"code": "en"
+	},
+	"system": false,
+	"value": {
+		"blocks": "Blocks",
+		"component": "Component",
+		"created_date": "Created Date",
+		"criticality": "Criticality",
+		"depends_on": "Depends On",
+		"description": "Description",
+		"estimated_hours": "Estimated Hours",
+		"modified_date": "Modified Date",
+		"priority": "Priority",
+		"requester": "Requester",
+		"resolution_text": "Resolution Text",
+		"status": "Status",
+		"summary": "Summary",
+		"target_milestone": "Target Milestone"
+	}
+},
+{
+	"__ver": "issuetracker:1",
+	"_class": "LabelGroup",
+	"_id": "Tvvwmb3rQE2trJ6y9GYbmA",
+	"key": "db.enum.IssueStatus",
+	"language": {
+		"_disp": "English",
+		"_id": "-9vPfv2lEeSFtiimx_V4dw",
+		"code": "en"
+	},
+	"system": false,
+	"value": {
+		"blocked": "Blocked",
+		"cancelled": "Cancelled",
+		"confirmed": "Confirmed",
+		"in_work": "In Work",
+		"new": "New",
+		"resolved": "Resolved"
+	}
+},
+{
+	"__ver": "issuetracker:3",
+	"_class": "LabelGroup",
+	"_id": "UOLOwXQHTQqxVyfRjNOrYQ",
+	"key": "db.enum.IssuePriority",
+	"language": {
+		"_disp": "English",
+		"_id": "-9vPfv2lEeSFtiimx_V4dw",
+		"code": "en"
+	},
+	"system": false,
+	"value": {
+		"1_max": "Maximum",
+		"2_high": "High",
+		"3_medium": "Medium",
+		"4_low": "Low",
+		"5_min": "Minimum"
+	}
+},
+{
+	"__ver": "issuetracker:1",
+	"_class": "LabelGroup",
+	"_id": "pSKcyiBIRR6XD4bVWIYdVA",
+	"key": "sys.dbui.bo.ProductComponent",
+	"language": {
+		"_disp": "English",
+		"_id": "-9vPfv2lEeSFtiimx_V4dw",
+		"code": "en"
+	},
+	"system": false,
+	"value": {
+		"description": "Description",
+		"name": "Name",
+		"product": "Product",
+		"status": "Status"
+	}
+},
+{
+	"__ver": "issuetracker:4",
+	"_class": "LabelGroup",
+	"_id": "z1CyOdDqRKOwKY6SaVxAcA",
+	"key": "db.enum.IssueSeverity",
+	"language": {
+		"_disp": "English",
+		"_id": "-9vPfv2lEeSFtiimx_V4dw",
+		"code": "en"
+	},
+	"system": false,
+	"value": {
+		"1_urgent": "Urgent",
+		"2_high": "High",
+		"3_medium": "Medium",
+		"4_low": "Low",
+		"5_unknown": "Unknown"
+	}
+}]}
