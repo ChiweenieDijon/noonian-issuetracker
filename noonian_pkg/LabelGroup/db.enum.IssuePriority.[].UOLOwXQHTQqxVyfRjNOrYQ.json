@@ -1,0 +1,18 @@
+{
+	"__ver": "issuetracker:3",
+	"_id": "UOLOwXQHTQqxVyfRjNOrYQ",
+	"key": "db.enum.IssuePriority",
+	"language": {
+		"_disp": "English",
+		"_id": "-9vPfv2lEeSFtiimx_V4dw",
+		"code": "en"
+	},
+	"system": false,
+	"value": {
+		"1_max": "Maximum",
+		"2_high": "High",
+		"3_medium": "Medium",
+		"4_low": "Low",
+		"5_min": "Minimum"
+	}
+}

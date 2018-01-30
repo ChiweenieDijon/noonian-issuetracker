@@ -1,0 +1,26 @@
+{
+	"__ver": "issuetracker:1",
+	"_id": "gGG_8nlGT1OLI-AKf4_8zg",
+	"abstract": false,
+	"class_name": "Product",
+	"definition": {
+		"description": {
+			"type": "text"
+		},
+		"milestones": [
+			{
+				"type": "string"
+			}
+		],
+		"name": {
+			"type": "string"
+		},
+		"versions": [
+			{
+				"type": "string"
+			}
+		]
+	},
+	"doc": "\n @property {text} description \n @property {string[]} milestones \n @property {string} name \n @property {string[]} versions \n",
+	"system": false
+}

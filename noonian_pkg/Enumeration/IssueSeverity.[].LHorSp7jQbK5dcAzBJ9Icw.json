@@ -1,0 +1,12 @@
+{
+	"__ver": "issuetracker:2",
+	"_id": "LHorSp7jQbK5dcAzBJ9Icw",
+	"name": "IssueSeverity",
+	"values": [
+		"1_urgent",
+		"2_high",
+		"3_medium",
+		"4_low",
+		"5_unknown"
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"__ver": "issuetracker:1",
+	"_id": "DDpEo0AZRfOHdLho1hClHA",
+	"key": "db.enum.IssueTag",
+	"language": {
+		"_disp": "English",
+		"_id": "-9vPfv2lEeSFtiimx_V4dw",
+		"code": "en"
+	},
+	"system": false,
+	"value": {
+		"Bug": "Bug",
+		"Enhancement": "Enhancement",
+		"New Feature": "New Feature"
+	}
+}

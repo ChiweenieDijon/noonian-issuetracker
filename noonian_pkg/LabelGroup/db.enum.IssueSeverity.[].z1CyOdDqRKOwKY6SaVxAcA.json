@@ -1,0 +1,18 @@
+{
+	"__ver": "issuetracker:4",
+	"_id": "z1CyOdDqRKOwKY6SaVxAcA",
+	"key": "db.enum.IssueSeverity",
+	"language": {
+		"_disp": "English",
+		"_id": "-9vPfv2lEeSFtiimx_V4dw",
+		"code": "en"
+	},
+	"system": false,
+	"value": {
+		"1_urgent": "Urgent",
+		"2_high": "High",
+		"3_medium": "Medium",
+		"4_low": "Low",
+		"5_unknown": "Unknown"
+	}
+}

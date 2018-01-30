@@ -1,0 +1,27 @@
+{
+	"__ver": "issuetracker:1",
+	"_id": "S5FNfJONRiCxXELMrwARvw",
+	"key": "sys.dbui.bo.ProductIssue",
+	"language": {
+		"_disp": "English",
+		"_id": "-9vPfv2lEeSFtiimx_V4dw",
+		"code": "en"
+	},
+	"system": false,
+	"value": {
+		"blocks": "Blocks",
+		"component": "Component",
+		"created_date": "Created Date",
+		"criticality": "Criticality",
+		"depends_on": "Depends On",
+		"description": "Description",
+		"estimated_hours": "Estimated Hours",
+		"modified_date": "Modified Date",
+		"priority": "Priority",
+		"requester": "Requester",
+		"resolution_text": "Resolution Text",
+		"status": "Status",
+		"summary": "Summary",
+		"target_milestone": "Target Milestone"
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"__ver": "issuetracker:1",
+	"_id": "5O6-uluaSz-SQuKeBBV5lg",
+	"abstract": false,
+	"class_name": "ProductComponent",
+	"definition": {
+		"description": {
+			"type": "text"
+		},
+		"name": {
+			"type": "string"
+		},
+		"product": {
+			"ref_class": "Product",
+			"type": "reference"
+		},
+		"status": {
+			"enum": [
+				"active",
+				"inactive"
+			],
+			"type": "string"
+		}
+	},
+	"doc": "\n @property {text} description \n @property {string} name \n @property {reference.<Product>} product \n @property {string} status \n",
+	"system": false
+}

@@ -1,0 +1,13 @@
+{
+	"__ver": "issuetracker:1",
+	"_id": "8ex9ReY1RCqpU-oOv1Pirg",
+	"name": "IssueStatus",
+	"values": [
+		"new",
+		"confirmed",
+		"blocked",
+		"in_work",
+		"resolved",
+		"cancelled"
+	]
+}

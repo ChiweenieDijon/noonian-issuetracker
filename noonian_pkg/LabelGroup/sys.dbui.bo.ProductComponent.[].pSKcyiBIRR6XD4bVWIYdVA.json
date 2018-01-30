@@ -1,0 +1,17 @@
+{
+	"__ver": "issuetracker:1",
+	"_id": "pSKcyiBIRR6XD4bVWIYdVA",
+	"key": "sys.dbui.bo.ProductComponent",
+	"language": {
+		"_disp": "English",
+		"_id": "-9vPfv2lEeSFtiimx_V4dw",
+		"code": "en"
+	},
+	"system": false,
+	"value": {
+		"description": "Description",
+		"name": "Name",
+		"product": "Product",
+		"status": "Status"
+	}
+}

@@ -1,0 +1,51 @@
+{
+	"__ver": "issuetracker:2",
+	"_id": "FQFrPv__Q9KxVnIEyQ2l6A",
+	"allow_customize": false,
+	"key": "sys.dbui.perspective.default.Product",
+	"rolespec": [
+	],
+	"system": false,
+	"value": {
+		"edit": {
+			"layout": [
+				"name",
+				"description",
+				"versions",
+				"milestones"
+			]
+		},
+		"list": {
+			"fields": [
+				"name",
+				"versions",
+				"milestones"
+			]
+		},
+		"picker_list": {
+			"fields": [
+				"name",
+				"versions",
+				"milestones"
+			]
+		},
+		"view": {
+			"layout": [
+				"name",
+				"description",
+				"versions",
+				"milestones"
+			],
+			"related": [
+				{
+					"class": "Component",
+					"field": "product"
+				},
+				{
+					"class": "ProductIssue",
+					"field": "product"
+				}
+			]
+		}
+	}
+}
