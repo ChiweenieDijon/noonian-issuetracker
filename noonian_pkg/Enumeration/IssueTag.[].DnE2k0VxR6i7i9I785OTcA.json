@@ -1,0 +1,10 @@
+{
+	"__ver": "issuetracker:1",
+	"_id": "DnE2k0VxR6i7i9I785OTcA",
+	"name": "IssueTag",
+	"values": [
+		"Bug",
+		"Enhancement",
+		"New Feature"
+	]
+}

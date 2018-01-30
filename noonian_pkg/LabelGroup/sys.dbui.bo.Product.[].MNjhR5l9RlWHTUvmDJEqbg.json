@@ -1,0 +1,17 @@
+{
+	"__ver": "issuetracker:1",
+	"_id": "MNjhR5l9RlWHTUvmDJEqbg",
+	"key": "sys.dbui.bo.Product",
+	"language": {
+		"_disp": "English",
+		"_id": "-9vPfv2lEeSFtiimx_V4dw",
+		"code": "en"
+	},
+	"system": false,
+	"value": {
+		"description": "Description",
+		"milestones": "Milestones",
+		"name": "Name",
+		"versions": "Versions"
+	}
+}

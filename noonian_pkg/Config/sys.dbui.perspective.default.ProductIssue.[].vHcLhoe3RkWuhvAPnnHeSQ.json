@@ -1,0 +1,85 @@
+{
+	"__ver": "issuetracker:3",
+	"_id": "vHcLhoe3RkWuhvAPnnHeSQ",
+	"allow_customize": false,
+	"key": "sys.dbui.perspective.default.ProductIssue",
+	"rolespec": [
+	],
+	"system": false,
+	"value": {
+		"edit": {
+			"layout": [
+				"status",
+				"product",
+				"component",
+				[
+					"priority",
+					"severity"
+				],
+				"summary",
+				"description",
+				[
+					"estimated_hours",
+					"actual_hours"
+				],
+				"requester",
+				"resolution_text",
+				"target_milestone",
+				[
+					"depends_on",
+					"blocks"
+				],
+				"task"
+			]
+		},
+		"list": {
+			"fields": [
+				"product",
+				"component",
+				"summary",
+				"status",
+				"priority",
+				"created_date"
+			]
+		},
+		"picker_list": {
+			"fields": [
+				"product",
+				"component",
+				"summary",
+				"status",
+				"priority",
+				"created_date"
+			]
+		},
+		"view": {
+			"layout": [
+				[
+					"created_date",
+					"modified_date"
+				],
+				"status",
+				"product",
+				"component",
+				[
+					"priority",
+					"criticality"
+				],
+				"summary",
+				"description",
+				[
+					"estimated_hours",
+					"actual_hours"
+				],
+				"requester",
+				"resolution_text",
+				"target_milestone",
+				[
+					"depends_on",
+					"blocks"
+				],
+				"task"
+			]
+		}
+	}
+}

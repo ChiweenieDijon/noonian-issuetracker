@@ -1,0 +1,12 @@
+{
+	"__ver": "issuetracker:3",
+	"_id": "bAKyGYSNR_uHnPVsh0CvhA",
+	"name": "IssuePriority",
+	"values": [
+		"1_max",
+		"2_high",
+		"3_medium",
+		"4_low",
+		"5_min"
+	]
+}

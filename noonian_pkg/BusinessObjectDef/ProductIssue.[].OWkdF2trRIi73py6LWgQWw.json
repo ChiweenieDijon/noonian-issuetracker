@@ -1,0 +1,68 @@
+{
+	"__ver": "issuetracker:6",
+	"_id": "OWkdF2trRIi73py6LWgQWw",
+	"abstract": false,
+	"class_name": "ProductIssue",
+	"definition": {
+		"_disp": "<%= summary %>",
+		"blocks": [
+			{
+				"ref_class": "ProductIssue",
+				"type": "reference"
+			}
+		],
+		"component": {
+			"ref_class": "ProductComponent",
+			"type": "reference"
+		},
+		"created_date": {
+			"type": "date"
+		},
+		"depends_on": [
+			{
+				"ref_class": "ProductIssue",
+				"type": "reference"
+			}
+		],
+		"description": {
+			"type": "text"
+		},
+		"estimated_hours": {
+			"type": "integer"
+		},
+		"modified_date": {
+			"type": "date"
+		},
+		"priority": {
+			"enum": "IssuePriority",
+			"type": "enum"
+		},
+		"requester": {
+			"ref_class": "User",
+			"type": "reference"
+		},
+		"resolution_text": {
+			"type": "text"
+		},
+		"severity": {
+			"enum": "IssueSeverity",
+			"type": "enum"
+		},
+		"status": {
+			"enum": "IssueStatus",
+			"type": "enum"
+		},
+		"summary": {
+			"type": "string"
+		},
+		"tags": {
+			"enum": "IssueTag",
+			"type": "taglist"
+		},
+		"target_milestone": {
+			"type": "string"
+		}
+	},
+	"doc": "\n @property {reference.<ProductIssue>[]} blocks \n @property {reference.<Component>} component \n @property {date} created_date \n @property {enum} criticality \n @property {reference.<ProductIssue>[]} depends_on \n @property {text} description \n @property {integer} estimated_hours \n @property {date} modified_date \n @property {enum} priority \n @property {string} requester \n @property {text} resolution_text \n @property {string} status \n @property {string} summary \n @property {string} target_milestone \n\n @property {enum} severity \n\n @property {taglist} tags \n",
+	"system": false
+}

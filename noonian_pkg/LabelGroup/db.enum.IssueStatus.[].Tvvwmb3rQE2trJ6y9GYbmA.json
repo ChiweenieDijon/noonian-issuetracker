@@ -1,0 +1,19 @@
+{
+	"__ver": "issuetracker:1",
+	"_id": "Tvvwmb3rQE2trJ6y9GYbmA",
+	"key": "db.enum.IssueStatus",
+	"language": {
+		"_disp": "English",
+		"_id": "-9vPfv2lEeSFtiimx_V4dw",
+		"code": "en"
+	},
+	"system": false,
+	"value": {
+		"blocked": "Blocked",
+		"cancelled": "Cancelled",
+		"confirmed": "Confirmed",
+		"in_work": "In Work",
+		"new": "New",
+		"resolved": "Resolved"
+	}
+}
