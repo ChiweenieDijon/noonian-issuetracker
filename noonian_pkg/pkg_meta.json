@@ -1,0 +1,10 @@
+{
+	"__ver": "sys-auto:1|issuetracker:1",
+	"_id": "AppjIgVxEei8YQAaTWcOdQ",
+	"description": "Basic issue tracker that can inserted into any noonian app",
+	"enable_building": false,
+	"key": "app.issuetracker",
+	"major_version": 0,
+	"minor_version": 0,
+	"name": "Issue Tracker"
+}
