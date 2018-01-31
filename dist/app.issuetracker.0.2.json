@@ -15,31 +15,34 @@
 	"manifest": {
 		"BusinessObjectDef": {
 			"5O6-uluaSz-SQuKeBBV5lg": "issuetracker:1",
-			"OWkdF2trRIi73py6LWgQWw": "issuetracker:6",
+			"OWkdF2trRIi73py6LWgQWw": "issuetracker:7",
 			"gGG_8nlGT1OLI-AKf4_8zg": "issuetracker:1"
 		},
 		"Config": {
 			"FQFrPv__Q9KxVnIEyQ2l6A": "issuetracker:2",
-			"vHcLhoe3RkWuhvAPnnHeSQ": "issuetracker:3",
+			"vHcLhoe3RkWuhvAPnnHeSQ": "issuetracker:5",
 			"zJDJnRMjQRC0CgGpSystag": "issuetracker:2"
+		},
+		"DataTrigger": {
+			"A6-tr6CHS6eOKmrX5JTg2g": "issuetracker:3"
 		},
 		"Enumeration": {
 			"8ex9ReY1RCqpU-oOv1Pirg": "issuetracker:1",
 			"DnE2k0VxR6i7i9I785OTcA": "issuetracker:1",
 			"LHorSp7jQbK5dcAzBJ9Icw": "issuetracker:2",
-			"bAKyGYSNR_uHnPVsh0CvhA": "issuetracker:3"
+			"bAKyGYSNR_uHnPVsh0CvhA": "issuetracker:4"
 		},
 		"LabelGroup": {
 			"DDpEo0AZRfOHdLho1hClHA": "issuetracker:1",
 			"MNjhR5l9RlWHTUvmDJEqbg": "issuetracker:1",
-			"S5FNfJONRiCxXELMrwARvw": "issuetracker:1",
+			"S5FNfJONRiCxXELMrwARvw": "issuetracker:3",
 			"Tvvwmb3rQE2trJ6y9GYbmA": "issuetracker:1",
-			"UOLOwXQHTQqxVyfRjNOrYQ": "issuetracker:3",
+			"UOLOwXQHTQqxVyfRjNOrYQ": "issuetracker:4",
 			"pSKcyiBIRR6XD4bVWIYdVA": "issuetracker:1",
 			"z1CyOdDqRKOwKY6SaVxAcA": "issuetracker:4"
 		}
 	},
-	"minor_version": 1,
+	"minor_version": 2,
 	"name": "Issue Tracker"
 },
 "business_objects":[
@@ -74,7 +77,7 @@
 },
 {
 	"__disp": "ProductIssue",
-	"__ver": "issuetracker:6",
+	"__ver": "issuetracker:7",
 	"_class": "BusinessObjectDef",
 	"_id": "OWkdF2trRIi73py6LWgQWw",
 	"abstract": false,
@@ -88,6 +91,9 @@
 			}
 		],
 		"component": {
+			"denormalize_fields": [
+				"product"
+			],
 			"ref_class": "ProductComponent",
 			"type": "reference"
 		},
@@ -223,7 +229,7 @@
 	}
 },
 {
-	"__ver": "issuetracker:3",
+	"__ver": "issuetracker:5",
 	"_class": "Config",
 	"_id": "vHcLhoe3RkWuhvAPnnHeSQ",
 	"allow_customize": false,
@@ -235,12 +241,12 @@
 		"edit": {
 			"layout": [
 				"status",
-				"product",
 				"component",
 				[
 					"priority",
 					"severity"
 				],
+				"tags",
 				"summary",
 				"description",
 				[
@@ -253,13 +259,11 @@
 				[
 					"depends_on",
 					"blocks"
-				],
-				"task"
+				]
 			]
 		},
 		"list": {
 			"fields": [
-				"product",
 				"component",
 				"summary",
 				"status",
@@ -269,7 +273,6 @@
 		},
 		"picker_list": {
 			"fields": [
-				"product",
 				"component",
 				"summary",
 				"status",
@@ -284,12 +287,12 @@
 					"modified_date"
 				],
 				"status",
-				"product",
 				"component",
 				[
 					"priority",
 					"criticality"
 				],
+				"tags",
 				"summary",
 				"description",
 				[
@@ -302,8 +305,7 @@
 				[
 					"depends_on",
 					"blocks"
-				],
-				"task"
+				]
 			]
 		}
 	}
@@ -356,6 +358,22 @@
 	}
 },
 {
+	"__ver": "issuetracker:3",
+	"_class": "DataTrigger",
+	"_id": "A6-tr6CHS6eOKmrX5JTg2g",
+	"action": "function () {\n    if(this._current_user && this._current_user._id && !this.requester) {\n        this.requester = {_id:this._current_user._id};\n    }\n    if(!this.status) {\n        this.status='new';\n    }\n    if(!this.priority) {\n        this.priority = '0_tbd';\n    }\n}",
+	"before_after": "before",
+	"business_object": {
+		"_disp": "ProductIssue",
+		"_id": "OWkdF2trRIi73py6LWgQWw"
+	},
+	"doc": "set requester to _current_user",
+	"key": "app.issuetracker.ProductIssue.onCreate",
+	"on_create": true,
+	"on_delete": false,
+	"on_update": false
+},
+{
 	"__ver": "issuetracker:1",
 	"_class": "Enumeration",
 	"_id": "8ex9ReY1RCqpU-oOv1Pirg",
@@ -394,7 +412,7 @@
 	]
 },
 {
-	"__ver": "issuetracker:3",
+	"__ver": "issuetracker:4",
 	"_class": "Enumeration",
 	"_id": "bAKyGYSNR_uHnPVsh0CvhA",
 	"name": "IssuePriority",
@@ -403,7 +421,8 @@
 		"2_high",
 		"3_medium",
 		"4_low",
-		"5_min"
+		"5_min",
+		"0_tbd"
 	]
 },
 {
@@ -442,7 +461,7 @@
 	}
 },
 {
-	"__ver": "issuetracker:1",
+	"__ver": "issuetracker:3",
 	"_class": "LabelGroup",
 	"_id": "S5FNfJONRiCxXELMrwARvw",
 	"key": "sys.dbui.bo.ProductIssue",
@@ -456,7 +475,6 @@
 		"blocks": "Blocks",
 		"component": "Component",
 		"created_date": "Created Date",
-		"criticality": "Criticality",
 		"depends_on": "Depends On",
 		"description": "Description",
 		"estimated_hours": "Estimated Hours",
@@ -464,8 +482,10 @@
 		"priority": "Priority",
 		"requester": "Requester",
 		"resolution_text": "Resolution Text",
+		"severity": "Severity",
 		"status": "Status",
 		"summary": "Summary",
+		"tags": "Tags",
 		"target_milestone": "Target Milestone"
 	}
 },
@@ -490,7 +510,7 @@
 	}
 },
 {
-	"__ver": "issuetracker:3",
+	"__ver": "issuetracker:4",
 	"_class": "LabelGroup",
 	"_id": "UOLOwXQHTQqxVyfRjNOrYQ",
 	"key": "db.enum.IssuePriority",
@@ -501,6 +521,7 @@
 	},
 	"system": false,
 	"value": {
+		"0_tbd": "TBD",
 		"1_max": "Maximum",
 		"2_high": "High",
 		"3_medium": "Medium",

@@ -1,5 +1,5 @@
 {
-	"__ver": "issuetracker:3",
+	"__ver": "issuetracker:4",
 	"_id": "UOLOwXQHTQqxVyfRjNOrYQ",
 	"key": "db.enum.IssuePriority",
 	"language": {
@@ -9,6 +9,7 @@
 	},
 	"system": false,
 	"value": {
+		"0_tbd": "TBD",
 		"1_max": "Maximum",
 		"2_high": "High",
 		"3_medium": "Medium",
