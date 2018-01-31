@@ -1,5 +1,5 @@
 {
-	"__ver": "issuetracker:3",
+	"__ver": "issuetracker:5",
 	"_id": "vHcLhoe3RkWuhvAPnnHeSQ",
 	"allow_customize": false,
 	"key": "sys.dbui.perspective.default.ProductIssue",
@@ -10,12 +10,12 @@
 		"edit": {
 			"layout": [
 				"status",
-				"product",
 				"component",
 				[
 					"priority",
 					"severity"
 				],
+				"tags",
 				"summary",
 				"description",
 				[
@@ -28,13 +28,11 @@
 				[
 					"depends_on",
 					"blocks"
-				],
-				"task"
+				]
 			]
 		},
 		"list": {
 			"fields": [
-				"product",
 				"component",
 				"summary",
 				"status",
@@ -44,7 +42,6 @@
 		},
 		"picker_list": {
 			"fields": [
-				"product",
 				"component",
 				"summary",
 				"status",
@@ -59,12 +56,12 @@
 					"modified_date"
 				],
 				"status",
-				"product",
 				"component",
 				[
 					"priority",
 					"criticality"
 				],
+				"tags",
 				"summary",
 				"description",
 				[
@@ -77,8 +74,7 @@
 				[
 					"depends_on",
 					"blocks"
-				],
-				"task"
+				]
 			]
 		}
 	}

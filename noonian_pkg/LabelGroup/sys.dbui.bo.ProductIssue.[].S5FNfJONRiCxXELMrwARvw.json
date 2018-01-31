@@ -1,5 +1,5 @@
 {
-	"__ver": "issuetracker:1",
+	"__ver": "issuetracker:3",
 	"_id": "S5FNfJONRiCxXELMrwARvw",
 	"key": "sys.dbui.bo.ProductIssue",
 	"language": {
@@ -12,7 +12,6 @@
 		"blocks": "Blocks",
 		"component": "Component",
 		"created_date": "Created Date",
-		"criticality": "Criticality",
 		"depends_on": "Depends On",
 		"description": "Description",
 		"estimated_hours": "Estimated Hours",
@@ -20,8 +19,10 @@
 		"priority": "Priority",
 		"requester": "Requester",
 		"resolution_text": "Resolution Text",
+		"severity": "Severity",
 		"status": "Status",
 		"summary": "Summary",
+		"tags": "Tags",
 		"target_milestone": "Target Milestone"
 	}
 }

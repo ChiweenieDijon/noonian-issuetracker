@@ -1,5 +1,5 @@
 {
-	"__ver": "issuetracker:6",
+	"__ver": "issuetracker:7",
 	"_id": "OWkdF2trRIi73py6LWgQWw",
 	"abstract": false,
 	"class_name": "ProductIssue",
@@ -12,6 +12,9 @@
 			}
 		],
 		"component": {
+			"denormalize_fields": [
+				"product"
+			],
 			"ref_class": "ProductComponent",
 			"type": "reference"
 		},

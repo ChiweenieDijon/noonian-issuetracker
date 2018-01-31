@@ -1,0 +1,14 @@
+{
+	"__ver": "issuetracker:3",
+	"_id": "A6-tr6CHS6eOKmrX5JTg2g",
+	"before_after": "before",
+	"business_object": {
+		"_disp": "ProductIssue",
+		"_id": "OWkdF2trRIi73py6LWgQWw"
+	},
+	"doc": "set requester to _current_user",
+	"key": "app.issuetracker.ProductIssue.onCreate",
+	"on_create": true,
+	"on_delete": false,
+	"on_update": false
+}

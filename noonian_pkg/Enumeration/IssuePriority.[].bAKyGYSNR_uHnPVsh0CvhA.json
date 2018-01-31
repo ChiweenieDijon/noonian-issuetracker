@@ -1,5 +1,5 @@
 {
-	"__ver": "issuetracker:3",
+	"__ver": "issuetracker:4",
 	"_id": "bAKyGYSNR_uHnPVsh0CvhA",
 	"name": "IssuePriority",
 	"values": [
@@ -7,6 +7,7 @@
 		"2_high",
 		"3_medium",
 		"4_low",
-		"5_min"
+		"5_min",
+		"0_tbd"
 	]
 }
