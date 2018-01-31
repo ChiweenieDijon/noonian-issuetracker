@@ -1,5 +1,5 @@
 {
-	"__ver": "sys-auto:1|issuetracker:3",
+	"__ver": "sys-auto:1|issuetracker:4",
 	"_id": "AppjIgVxEei8YQAaTWcOdQ",
 	"build_config": {
 		"exclude": [
@@ -15,35 +15,38 @@
 	"manifest": {
 		"BusinessObjectDef": {
 			"5O6-uluaSz-SQuKeBBV5lg": "issuetracker:1",
-			"OWkdF2trRIi73py6LWgQWw": "issuetracker:6",
+			"OWkdF2trRIi73py6LWgQWw": "issuetracker:7",
 			"gGG_8nlGT1OLI-AKf4_8zg": "issuetracker:1"
 		},
 		"Config": {
 			"FQFrPv__Q9KxVnIEyQ2l6A": "issuetracker:2",
-			"vHcLhoe3RkWuhvAPnnHeSQ": "issuetracker:3",
+			"vHcLhoe3RkWuhvAPnnHeSQ": "issuetracker:5",
 			"zJDJnRMjQRC0CgGpSystag": "issuetracker:2"
+		},
+		"DataTrigger": {
+			"A6-tr6CHS6eOKmrX5JTg2g": "issuetracker:3"
 		},
 		"Enumeration": {
 			"8ex9ReY1RCqpU-oOv1Pirg": "issuetracker:1",
 			"DnE2k0VxR6i7i9I785OTcA": "issuetracker:1",
 			"LHorSp7jQbK5dcAzBJ9Icw": "issuetracker:2",
-			"bAKyGYSNR_uHnPVsh0CvhA": "issuetracker:3"
+			"bAKyGYSNR_uHnPVsh0CvhA": "issuetracker:4"
 		},
 		"LabelGroup": {
 			"DDpEo0AZRfOHdLho1hClHA": "issuetracker:1",
 			"MNjhR5l9RlWHTUvmDJEqbg": "issuetracker:1",
-			"S5FNfJONRiCxXELMrwARvw": "issuetracker:1",
+			"S5FNfJONRiCxXELMrwARvw": "issuetracker:3",
 			"Tvvwmb3rQE2trJ6y9GYbmA": "issuetracker:1",
-			"UOLOwXQHTQqxVyfRjNOrYQ": "issuetracker:3",
+			"UOLOwXQHTQqxVyfRjNOrYQ": "issuetracker:4",
 			"pSKcyiBIRR6XD4bVWIYdVA": "issuetracker:1",
 			"z1CyOdDqRKOwKY6SaVxAcA": "issuetracker:4"
 		}
 	},
-	"minor_version": 1,
+	"minor_version": 2,
 	"name": "Issue Tracker",
 	"package_file": {
-		"attachment_id": "V1faAgwyR1e0wH1zD9apbg",
-		"filename": "app.issuetracker.0.1.json",
+		"attachment_id": "RnqP5VpTTeGnNR8ZD5ZAjg",
+		"filename": "app.issuetracker.0.2.json",
 		"type": "application/json"
 	}
 }
